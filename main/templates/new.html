@@ -6,6 +6,9 @@
     <title>학생정보</title>
 </head>
 <body>
+    <a href="{% url 'index' %}">
+        홈으로
+    </a>
     <form action="{% url 'create' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
 
