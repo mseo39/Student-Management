@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 50px;
+}
+
+.all_student{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+}
+
+p{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}

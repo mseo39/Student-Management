@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생정보</title>
+</head>
+<body>
+    <form action="{% url 'create' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="inputName">이름</label>
+            <input type="text" class="form-control" id="inputName" name="name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputMajor">학과</label>
+            <input type="text" class="form-control" id="inputMajor" name="major" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputYea">입학 년도</label>
+            <input type="text" class="form-control" id="inputYear" name="year" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputClassof">학번</label>
+            <input type="text" class="form-control" id="inputClassof" name="classof" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputAverage">평균 학점</label>
+            <input type="text" class="form-control" id="inputAverage" name="average" required>
+        </div>
+
+        <hr class="mb-4">
+        <button class="btn btn-secondary btn-lg btn-block" type="submit">등록 완료하기</button>
+    </form>
+</body>
+</html>
