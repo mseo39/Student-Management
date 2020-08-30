@@ -48,7 +48,7 @@ def update(request, student):
 
         return redirect('detail', post.id)
     else:
-        return render(request, 'update.html', {'student':student})
+        return render(request, 'update.html', {'student':post})
 
 def detail(request,student):
     student = get_object_or_404(Students, pk=student)
