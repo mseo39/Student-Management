@@ -53,15 +53,3 @@ def update(request, student):
 def detail(request,student):
     student = get_object_or_404(Students, pk=student)
     return render(request,'detail.html', {'student':student})
-
-def signup(request):
-    regi_form = UserCreationForm()
-    filled_form= UserCreationForm(request.POST)
-    if filled_form.is_valid():
-        filled_form.save()
-        return redirect('index')
-
-    return render(request, 'signup.html', {'regi_form':regi_form})
-
-class MyLoginView(LoginView):
-    template_name='login.html'
